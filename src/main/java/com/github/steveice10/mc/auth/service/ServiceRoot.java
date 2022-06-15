@@ -30,7 +30,7 @@ public class ServiceRoot {
     private static URI sessionUri = DEFAULT_SESSION_URI;
     private static String[] whitelistedDomains = DEFAULT_WHITELISTED_DOMAINS;
     private static PublicKey signatureKey;
-    private static Proxy proxy;
+    private static Proxy proxy = Proxy.NO_PROXY;
 
     static {
         try (InputStream in = SessionService.class.getResourceAsStream("/yggdrasil_session_pubkey.der")) {
